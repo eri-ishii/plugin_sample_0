@@ -1,0 +1,179 @@
+/*-------------------------------
+               BASE
+--------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #c0c0c0 ;
+}
+
+/*-------------------------------
+         LAYOUT MOBILE
+--------------------------------*/
+
+#container {
+
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  height: 8rem;
+
+  background: #6b8e23;
+  color: white;
+  text-align: center;
+}
+header h1 {
+  /* position: absolute;
+  top: 2.5rem;
+  left: 0rem; */
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+header h2{
+  padding: 0px;
+   position: absolute;
+   text-align:center;
+   top: 5.5rem;
+   height:40px;
+   width: 100%;
+   font-size: 1.5rem;
+   line-height: 40px;
+
+   background-color: #bdb76b;
+ }
+
+#lists {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: burlywood;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+  opacity: 0.99;
+}
+#lists li {
+  width: 100%;
+  border-bottom: 1px solid #fff8aa;
+  list-style-type: none;
+  font-size: 80%;
+}
+#lists li:last-child {
+  border-bottom: none;
+}
+#lists a {
+  display: block;
+  padding: 1rem 0;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+}
+#lists a:hover {
+  background: #808000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap：wrap;
+  justify-content:space-between;
+}
+article{
+  min-height: 8rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  background: #f5f5dc;
+}
+article h1{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#slideContainer {
+  width: 80%;
+  margin: 2em auto;
+}
+article h2{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+article ul{
+  padding: 0px;
+  /* display: flex;
+  flex-direction: row; */
+  list-style: none;
+  font-size: 15px;
+}
+
+section{
+    flex: 5;
+    padding: 3rem;
+      background-image : url("images/bg_image_02.png");
+  }
+
+article h1,
+article p,
+aside h1,
+aside p {
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #808000;
+  color:white;
+}
+
+/*-------------------------------
+      LAYOUT PC (OverWrite)
+--------------------------------*/
+
+@media only screen and (min-width: 769px) {
+
+  header {
+    height: 9rem;
+  }
+  header h1 {
+    /* top: 2.5rem;
+    left: 0rem;
+    width: 100%;
+    text-align: center; */
+    font-size: 1.5rem;
+  }
+  header h2{
+    padding: 0px;
+     position: absolute;
+     text-align:center;
+     top: 6.5rem;
+     width: 100%;
+     height:40px;
+     line-height: 40px;
+
+     background-color: #f5f5dc;
+     font-size: 1.5rem;
+   }
+
+  #lists {
+    flex-direction: row;
+    justify-content: space-between;
+    top: 7rem;
+    left: 0;
+  }
+  #lists li {
+    flex:1;
+    border-bottom: none;
+    border-right: 1px solid #f5f5dc;
+  }
+  #lists li:last-child {
+    border-right: none;
+  }
